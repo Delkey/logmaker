@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: "/"
+spring:
+  profiles:
+    include:
+      - console-logging
+      - file-logging
+  jpa:
+    open-in-view: false
+#    generate-ddl: true
+  datasource:
+    hikari:
+      driver-class-name: "com.mysql.cj.jdbc.Driver"
+      jdbc-url: "jdbc:mysql://192.168.0.14:3306/logmaker?allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Seoul&useSSL=false"
+      username: "dalbame"
+      password: "dnjsdlf24"
+logging:
+  level:
+    logmaker: debug
+    root: info
+api:
+  url: "url"
